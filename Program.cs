@@ -7,11 +7,11 @@ namespace PA1
     {
         static void Main(string[] args)
         {
-            OpeningStatement();
+            OpeningStatement(); // welcomes user
             string user = " ";
             while(user != "4")
             {
-                user = Menus.MainMenu(user);
+                user = Menus.MainMenu(user); // accesses menu class
             }
         }
         static void OpeningStatement()

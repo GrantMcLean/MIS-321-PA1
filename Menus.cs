@@ -7,9 +7,9 @@ namespace PA1
     {
         public string user { get; set; }
 
-        static public string MainMenu(string user)
+        static public string MainMenu(string user)  // main menu for user
         {
-            Song.UpdateList();
+            Song.UpdateList();  // repopulates mySongs
             while(user != "4")
             {
             Console.Clear();
@@ -19,7 +19,7 @@ namespace PA1
             }
             return user;
         }
-        static void Route(string user)
+        static void Route(string user)  // routes users choice to correct method
             {
                 Console.Clear();
                 if(user == "1")

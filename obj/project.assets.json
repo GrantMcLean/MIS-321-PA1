@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bigmc\\OneDrive\\Desktop\\MIS 321\\PA1\\PA1.csproj",
+      "projectUniqueName": "C:\\Users\\bigmc\\OneDrive\\Desktop\\MIS 321\\MIS-321-PA1\\PA1.csproj",
       "projectName": "PA1",
-      "projectPath": "C:\\Users\\bigmc\\OneDrive\\Desktop\\MIS 321\\PA1\\PA1.csproj",
+      "projectPath": "C:\\Users\\bigmc\\OneDrive\\Desktop\\MIS 321\\MIS-321-PA1\\PA1.csproj",
       "packagesPath": "C:\\Users\\bigmc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bigmc\\OneDrive\\Desktop\\MIS 321\\PA1\\obj\\",
+      "outputPath": "C:\\Users\\bigmc\\OneDrive\\Desktop\\MIS 321\\MIS-321-PA1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bigmc\\AppData\\Roaming\\NuGet\\NuGet.Config"

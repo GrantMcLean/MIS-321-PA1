@@ -10,32 +10,36 @@ namespace PA1
         public  string songTitle { get; set; }
         public  string songID { get; set; }
         public  DateTime timeAdded { get; set; }
-        public static bool active { get; set; }
-        static public void UpdateList()
+        public bool active { get; set; }
+        static public void UpdateList() // repopulates list when program is first opened
         {
             myList.AddRange(SongFiles.PopulateList());
         }
-        static public void ShowAllSongs()
+        static public void ShowAllSongs()   // displays all not deleted songs 
         {
-                myList.Reverse();
-                foreach (var Song in myList)
+                myList.Sort(Song.CompareDate);
+                foreach (var song in myList)
                 {
 
-                    Console.Write("ID: " + Song.songID + ", ");
+                    if(song.active == true)
+                    {
+                        Console.Write("ID: " + song.songID + ", ");
 
-                    Console.Write("Song Title: " + Song.songTitle + ", ");
+                        Console.Write("Song Title: " + song.songTitle + ", ");
 
-                    Console.Write("Time Added: " + Song.timeAdded);
-                    Console.WriteLine("");
+                        Console.Write("Time Added: " + song.timeAdded);
+
+                        Console.WriteLine("");
+                    }
 
                 }
-                myList.Reverse();
+
             Console.WriteLine("Please enter any key to continue. . .");
 
             Console.ReadKey();
 
         }
-        static public void AddASong()
+        static public void AddASong()   // adds a song to mySongs and saves it to file
         {
         
             Console.WriteLine("What is the title of the song which you would like to add?");
@@ -48,63 +52,57 @@ namespace PA1
 
             DateTime time = DateTime.Now;           // obtains current time
 
-            // bool act = true;
+            bool act = true;
 
-            myList.Add (new Song {songID = newID, songTitle = title, timeAdded = time});
+            myList.Add (new Song {songID = newID, songTitle = title, timeAdded = time, active = act});
 
             SongFiles.SaveFile(myList); // adds List data to songs.txt file
 
         }
-        static public void DeleteASong()
+        static public void DeleteASong()    // soft delete
         {
-            int location = -1;
+             int location = -1;
 
             location = SelectID();
 
-            if(location != -1)
+            if(location == -1)  // checks if song ID was not found
             {
 
-                // myList.Remove(new Song() {songID = location});
-                myList.RemoveAt(location);
-
-            }
-            else
-            {
                 Console.Clear();
                 Console.WriteLine("Song not found.\nMake sure you entered it correctly.\nPlease enter any key to continue. . .");
                 Console.ReadKey();
-            }
 
+            }
         }
-        static public int SelectID()
+        static public int SelectID()    // checks if user input matches stored ID
         {
 
             ShowAllSongs();
  
-            Console.WriteLine("Which song would you like to remove?\n(Please enter the first few digits of the ID)");
+            Console.WriteLine("Which song would you like to delete?\n(Please enter the entire ID)");
            
             string location = Console.ReadLine();
 
+            int i = 0;
             foreach(var song in myList)
             {
-                int i = 0;
-                        // if(song.songID.CompareTo(location) == 0)
-                        // {
-                        //    return location;
-                        // }
                     if(song.songID.CompareTo(location) == 0)
                     {
-                        // return song.songID.IndexOf(location);
-                        return i;
+                        song.active = false;
+                        SongFiles.SaveFile(myList);
+                        return 0;
                     }
                 i++;
             }
-
+            i = 0;
             return -1;
+
         }
-        public override string ToString()
+        public static int CompareDate(Song x, Song y)   // sorts list by time added
         {
-            return songID + ", " + songTitle + ", " + timeAdded;
+            
+            return y.timeAdded.CompareTo(x.timeAdded);
+
         }
     }
 }
