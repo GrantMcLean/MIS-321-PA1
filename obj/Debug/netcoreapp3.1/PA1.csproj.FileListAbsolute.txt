@@ -1,0 +1,13 @@
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\obj\Debug\netcoreapp3.1\PA1.csprojAssemblyReference.cache
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\obj\Debug\netcoreapp3.1\PA1.AssemblyInfoInputs.cache
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\obj\Debug\netcoreapp3.1\PA1.AssemblyInfo.cs
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\obj\Debug\netcoreapp3.1\PA1.csproj.CoreCompileInputs.cache
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\bin\Debug\netcoreapp3.1\PA1.exe
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\bin\Debug\netcoreapp3.1\PA1.deps.json
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\bin\Debug\netcoreapp3.1\PA1.runtimeconfig.json
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\bin\Debug\netcoreapp3.1\PA1.runtimeconfig.dev.json
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\bin\Debug\netcoreapp3.1\PA1.dll
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\bin\Debug\netcoreapp3.1\PA1.pdb
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\obj\Debug\netcoreapp3.1\PA1.dll
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\obj\Debug\netcoreapp3.1\PA1.pdb
+C:\Users\bigmc\OneDrive\Desktop\MIS 321\PA1\obj\Debug\netcoreapp3.1\PA1.genruntimeconfig.cache
